@@ -29,6 +29,8 @@ public class CoursesManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Personnage sélectionné : " + GameData.SelectedCharacterName);
+        Debug.Log("Véhicule sélectionné : " + GameData.SelectedVehicleName);
         SpawnPlayers();
     }
 
