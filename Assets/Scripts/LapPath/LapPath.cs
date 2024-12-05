@@ -23,7 +23,7 @@ public class LapPath : MonoBehaviour
     // OnTrigger for child lap path
     public void OnTriggerEnterChildPath(Collider triggerCollider, ChildPath childPath)
     {
-        if (triggerCollider.CompareTag("Player") || triggerCollider.CompareTag("CPU")) {
+        if (triggerCollider.CompareTag("PlayerCollider") || triggerCollider.CompareTag("CPUCollider")) {
             Player player = triggerCollider.GetComponentInParent<Player>();
             int childIndex = childPath.transform.GetSiblingIndex();
 
@@ -37,7 +37,7 @@ public class LapPath : MonoBehaviour
     // OnTrigger parent lap path
     public void OnTriggerEnter(Collider triggerCollider)
     {
-        if (triggerCollider.CompareTag("Player") || triggerCollider.CompareTag("CPU")) {
+        if (triggerCollider.CompareTag("PlayerCollider") || triggerCollider.CompareTag("CPUCollider")) {
             Player player = triggerCollider.GetComponentInParent<Player>();
 
             if (player != null && player.currentCheckpoint == subPath.Count() - 1) {

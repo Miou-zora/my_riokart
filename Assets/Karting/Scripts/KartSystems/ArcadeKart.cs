@@ -1,10 +1,12 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.Netcode;
+using TMPro;
 
 namespace KartGame.KartSystems
 {
-    public class ArcadeKart : MonoBehaviour
+    public class ArcadeKart : NetworkBehaviour
     {
         [System.Serializable]
         public class StatPowerup
@@ -217,6 +219,9 @@ namespace KartGame.KartSystems
 
         void FixedUpdate()
         {
+            if (!IsOwner || !m_CanMove)
+                return;
+
             UpdateSuspensionParams(FrontLeftWheel);
             UpdateSuspensionParams(FrontRightWheel);
             UpdateSuspensionParams(RearLeftWheel);

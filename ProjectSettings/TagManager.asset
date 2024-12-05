@@ -7,6 +7,9 @@ TagManager:
   - c00_defaultRoad
   - StartPath
   - CPU
+  - PlayerCollider
+  - CPUCollider
+  - PreExistingLapCounter
   - ItemBox
   - Stunner
   - Ground

@@ -29,7 +29,7 @@ public class CoursesManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnPlayers();
+        //SpawnPlayers();
     }
 
     void SpawnPlayers()
